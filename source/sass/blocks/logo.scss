@@ -1,0 +1,9 @@
+.logo {
+  @media (min-width: $tablet-width) {
+    width: 82px;
+  }
+}
+
+.logo__image {
+  vertical-align: center;
+}

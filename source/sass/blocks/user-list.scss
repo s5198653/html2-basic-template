@@ -1,0 +1,19 @@
+.user-list {
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 120px;
+
+  span {
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+.user-list__link {
+  display: flex;
+  padding: 22px;
+}

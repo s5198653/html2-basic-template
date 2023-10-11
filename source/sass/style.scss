@@ -4,4 +4,10 @@
 @import "global/fonts";
 
 /* BLOCKS */
-@import "blocks/header";
+@import "blocks/visually-hidden";
+@import "blocks/page";
+@import "blocks/main-header";
+@import "blocks/main-nav";
+@import "blocks/user-list";
+@import "blocks/site-list";
+@import "blocks/logo";

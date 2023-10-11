@@ -8,39 +8,70 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo logo">
-      <img class="logo" src="images/logo-mobile.png" alt="Логотип Drink2Go." width="32" height="36">
+    <a class="main-header__logo logo" href="#">
+
+      <picture>
+        <source type="image/png" media="(min-width: 1440px)" srcset="images/logo-desktop.png">
+        <source type="image/png" media="(min-width: 768px)" srcset="images/logo-tablet.png">
+        <img class="logo__image" src="images/logo-mobile.png" alt="Логотип Drink2Go." width="32" height="36">
+      </picture>
+
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed">
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--current" href="#">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="#">Каталог</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="#">Доставка</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="#">О нас</a>
+        </li>
+      </ul>
+      <ul class="main-nav__list user-list">
+        <li class="user-list__item">
+          <a class="user-list__link user-list__link--login" href="#">
+            <svg class="user-list__login-icon" width="16" height="16">
+              <use href="images/icons/stack.svg#icon-login"></use>
+            </svg>
+            <span>Войти</span>
+          </a>
+        </li>
+        <li class="user-list__item">
+          <a class="user-list__link user-list__link--basket" href="#">
+            <svg class="user-list__basket" width="16" height="16">
+              <use href="images/icons/stack.svg#icon-basket"></use>
+            </svg>
+            <span>Корзина</span>
+          </a>
+        </li>
+      </ul>
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="main-nav__list site-list  site-list--closed">
-        <li class="site-list__item">Главная</li>
-        <li class="site-list__item">Каталог</li>
-        <li class="site-list__item">Доставка</li>
-        <li class="site-list__item">О нас</li>
-      </ul>
-      <ul class="main-nav__list user-list"></ul>
-      <li class="site-list__item">Войти</li>
-      <li class="site-list__item">Корзина</li>
     </nav>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
     <header class="hero">
-      <img class="hero__image" src="images/slider-mobile.jpg" alt="Кофе Декаф Флэт Уайт." width="280" height="280">
       <p class="hero__badge badge">Новинка!</p>
+      <img class="hero__image" src="images/slider-mobile.jpg" alt="Кофе Декаф Флэт Уайт." width="280" height="280">
       <p class="hero__title title">Декаф Флэт Уайт</p>
       <p class="hero__description description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
         молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-      <span class="hero__price hero__price hero__price--old">295₽</span>
-      <span class="hero__price hero__price">225₽</span>
-      <a href="#" class="hero__button">Заказать</a>
+      <span class="hero__price hero__price--old">295₽</span>
+      <span class="hero__price">225₽</span>
+      <a class="hero__button" href="#">Заказать</a>
     </header>
     <section class="features">
       <h2 class="features__badge badge">Преимущества</h2>
@@ -70,7 +101,7 @@
       <h2 class="catalog__badge badge">Каталог</h2>
       <p class="catalog__title title">Каталог кофейных напитков</p>
       <form class="catalog__filter" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="catalo__filter-group">
+        <fieldset class="catalog__filter-group">
           <legend class="catalog__filter-title">Цена:</legend>
 
           <div class="range">
@@ -155,7 +186,7 @@
       </form>
       <div class="catalog__sorting-select sorting-select">
         <span class="sorting-select__title">Сортировка:</span>
-        <select class="sorting-select__control" aria-label="Сортировка">
+        <select class="sorting-select__control" name="sort" aria-label="Сортировка">
           <option value="default">по умолчанию</option>
         </select>
       </div>
@@ -165,42 +196,42 @@
           <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
           <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
           <span class="catalog__item-price">225₽</span>
-          <a href="#" class="catalog__item-button">В корзину</a>
+          <a class="catalog__item-button" href="#">В корзину</a>
         </li>
         <li class="catalog__item">
           <img class="catalog__image" src="images/item-2-mobile.jpg" alt="Декаф Флэт Уайт" width="130" height="188">
           <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
           <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
           <span class="catalog__item-price">225₽</span>
-          <a href="#" class="catalog__item-button">В корзину</a>
+          <a class="catalog__item-button" href="#">В корзину</a>
         </li>
         <li class="catalog__item">
           <img class="catalog__image" src="images/item-3-mobile.jpg" alt="Декаф Флэт Уайт" width="130" height="188">
           <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
           <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
           <span class="catalog__item-price">225₽</span>
-          <a href="#" class="catalog__item-button">В корзину</a>
+          <a class="catalog__item-button" href="#">В корзину</a>
         </li>
         <li class="catalog__item">
           <img class="catalog__image" src="images/item-4-mobile.jpg" alt="Декаф Флэт Уайт" width="130" height="188">
           <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
           <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
           <span class="catalog__item-price">225₽</span>
-          <a href="#" class="catalog__item-button">В корзину</a>
+          <a class="catalog__item-button" href="#">В корзину</a>
         </li>
         <li class="catalog__item">
           <img class="catalog__image" src="images/item-5-mobile.jpg" alt="Декаф Флэт Уайт" width="130" height="188">
           <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
           <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
           <span class="catalog__item-price">225₽</span>
-          <a href="#" class="catalog__item-button">В корзину</a>
+          <a class="catalog__item-button" href="#">В корзину</a>
         </li>
         <li class="catalog__item">
           <img class="catalog__image" src="images/item-6-mobile.jpg" alt="Декаф Флэт Уайт" width="130" height="188">
           <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
           <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
           <span class="catalog__item-price">225₽</span>
-          <a href="#" class="catalog__item-button">В корзину</a>
+          <a class="catalog__item-button" href="#">В корзину</a>
         </li>
       </ul>
       <ul class="catalog__pagination pagination">
@@ -213,7 +244,7 @@
           <a class="pagination__link" href="#">1</a>
         </li>
         <li class="pagination__item">
-          <a class="pagination__link pagination__link--current">2</a>
+          <a class="pagination__link pagination__link--current" href="#">2</a>
         </li>
         <li class="pagination__item">
           <a class="pagination__link" href="#">3</a>
@@ -232,57 +263,57 @@
   </main>
 
   <footer class="main-footer">
-    <a class="main-footer__logo logo">
+    <a class="main-footer__logo logo" href="#">
       <img class="logo" src="images/logo-footer-mobile.png" alt="Логотип Drink2Go." width="82" height="36">
     </a>
-    <section class="main-footer__social social">
+    <div class="main-footer__social social">
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Мы в Вконтакте</span>
-            <svg width="40" height="40" aria-label="Страница Вконтакте">
-              <use xlink:href="img/sprite.svg#vk"></use>
+            <svg width="40" height="40">
+              <use href="img/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
         <li class=" social__item">
           <a class="social__link social__link--pinterest" href="#">
             <span class="visually-hidden">Мы в Пинтерест</span>
-            <svg width="40" height="40" aria-label="Страница Пинтерест">
-              <use xlink:href="img/sprite.svg#pinterest"></use>
+            <svg width="40" height="40">
+              <use href="img/sprite.svg#pinterest"></use>
             </svg>
           </a>
         </li>
         <li class=" social__item">
           <a class="social__link social__link--youtube" href="#">
             <span class="visually-hidden">Мы в Одноклассниках</span>
-            <svg width="40" height="40" aria-label="Страница Одноклассники">
-              <use xlink:href="img/sprite.svg#ok"></use>
+            <svg width="40" height="40">
+              <use href="img/sprite.svg#ok"></use>
             </svg>
           </a>
         </li>
       </ul>
-    </section>
+    </div>
     <section class="main-footer__shop-nav shop-nav">
       <h2 class="shop-nav__title">Интернет-магазин</h2>
       <ul class="shop-nav__list">
-        <li class="shop-nav__item"><a href="#" class="shop-nav__link">Каталог</a></li>
-        <li class="shop-nav__item"><a href="#" class="shop-nav__link">Доставка</a></li>
-        <li class="shop-nav__item"><a href="#" class="shop-nav__link">Способы оплаты</a></li>
-        <li class="shop-nav__item"><a href="#" class="shop-nav__link">О нас</a></li>
+        <li class="shop-nav__item"><a class="shop-nav__link" href="#">Каталог</a></li>
+        <li class="shop-nav__item"><a class="shop-nav__link" href="#">Доставка</a></li>
+        <li class="shop-nav__item"><a class="shop-nav__link" href="#">Способы оплаты</a></li>
+        <li class="shop-nav__item"><a class="shop-nav__link" href="#">О нас</a></li>
       </ul>
     </section>
     <section class="main-footer__media media">
       <h2 class="media__title">Медиа</h2>
       <ul class="media__list">
         <li class="media__item">
-          <a href="#" class="media__link">Правовая информация</a>
+          <a class="media__link" href="#">Правовая информация</a>
         </li>
         <li class="media__item">
-          <a href="#" class="media__link">Информация для СМИ</a>
+          <a class="media__link" href="#">Информация для СМИ</a>
         </li>
         <li class="media__item">
-          <a href="#" class="media__link">Правовая информация</a>
+          <a class="media__link" href="#">Правовая информация</a>
         </li>
       </ul>
     </section>
@@ -296,8 +327,8 @@
     <div class=" main-footer__copyright copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">Разработано в</span>
-        <svg width="112" height="16" aria-label="Сайт HTML Academy">
-          <use xlink:href="img/sprite.svg#logo-academy"></use>
+        <svg width="112" height="16">
+          <use href="img/sprite.svg#logo-academy"></use>
         </svg>
       </a>
     </div>

@@ -1,0 +1,35 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  min-width: 320px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-width: 400px;
+  }
+}
+
+.site-list__item {
+  display: block;
+}
+
+.site-list__link {
+  position: relative;
+  display: block;
+  padding: 20px;
+  padding-bottom: 19px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #333333;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #ffffff;
+  border-top: 1px solid #f0ebff;
+  border-bottom: 1px solid #f0ebff;
+}
