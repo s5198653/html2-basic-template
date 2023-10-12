@@ -11,9 +11,24 @@
     position: absolute;
     opacity: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 250px;
+    gap: 20px;
+
+    span {
+      position: static;
+      opacity: 1;
+    }
+  }
 }
 
 .user-list__link {
   display: flex;
   padding: 22px;
+  gap: 8px;
+
+  @media (min-width: $desktop-width) {
+    padding: 20px;
+  }
 }

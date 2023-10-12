@@ -11,6 +11,12 @@
     gap: 60px;
     align-items: center;
   }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 270px;
+    gap: 160px;
+    align-items: center;
+  }
 }
 
 .main-nav__list {

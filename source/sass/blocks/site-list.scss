@@ -23,17 +23,9 @@
   display: block;
   padding: 20px;
   padding-bottom: 19px;
-  font-family: "Montserrat", "Arial", sans-serif;
-  color: #333333;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 500;
-  letter-spacing: 0.24px;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: #ffffff;
-  border-top: 1px solid #f0ebff;
-  border-bottom: 1px solid #f0ebff;
+  background-color: $base-white;
+  border-top: 1px solid $base-secondary;
+  border-bottom: 1px solid $base-secondary;
 
   @media (min-width: $tablet-width) {
     border: none;
@@ -43,7 +35,7 @@
 
 .site-list__link--current {
   position: relative;
-  color: #7859cf;
+  color: $base-primary;
 
   &::after {
     position: absolute;
@@ -52,6 +44,6 @@
     bottom: -11px;
     height: 2px;
     width: 103px;
-    background-color: #7859cf;
+    background-color: $base-primary;
   }
 }
