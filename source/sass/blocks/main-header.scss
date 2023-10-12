@@ -9,5 +9,15 @@
 
   @media (min-width: $tablet-width) {
     min-height: 80px;
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    gap: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 40px;
+    grid-template-columns: 316px 1fr;
+    gap: 162px;
   }
 }

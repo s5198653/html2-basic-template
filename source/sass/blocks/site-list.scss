@@ -9,6 +9,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     min-width: 400px;
+    min-height: 100%;
+    align-items: center;
   }
 }
 
@@ -32,4 +34,24 @@
   background-color: #ffffff;
   border-top: 1px solid #f0ebff;
   border-bottom: 1px solid #f0ebff;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    min-height: 100%;
+  }
+}
+
+.site-list__link--current {
+  position: relative;
+  color: #7859cf;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -11px;
+    height: 2px;
+    width: 103px;
+    background-color: #7859cf;
+  }
 }

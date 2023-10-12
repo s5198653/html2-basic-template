@@ -2,6 +2,15 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
+
+
+  @media (min-width: $tablet-width) {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    gap: 60px;
+    align-items: center;
+  }
 }
 
 .main-nav__list {
@@ -15,13 +24,13 @@
   width: 60px;
   height: 60px;
   padding: 0;
-  background-color: #ffffff;
+  background-color: $base-white;
   border: none;
   cursor: pointer;
 
   &:hover,
   &:active {
-    background-color: #f0ebff;
+    background-color: $base-secondary;
   }
 
   @media (min-width: $tablet-width) {

@@ -1,9 +1,29 @@
 .logo {
-  @media (min-width: $tablet-width) {
-    width: 82px;
-  }
+  display: flex;
+  align-self: center;
+  color: $base-black;
+  text-decoration: none;
+  gap: 20px;
 }
 
 .logo__image {
   vertical-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
+}
+
+.logo span {
+  display: none;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
 }
