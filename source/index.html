@@ -63,14 +63,33 @@
   <main class="main-container">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
     <header class="hero">
+      <button class="hero__slider-button hero__slider-button--prev" type="button"
+        aria-label="Предыдущий слайд."></button>
+      <button class="hero__slider-button hero__slider-button--next" type="button"
+        aria-label="Следующий слайд."></button>
+      <picture>
+        <source media="(min-width: 1440px)" type="image/webp"
+          srcset="images/flat-white-desktop@1x.webp 1x, images/flat-white-desktop@2x.webp 2x">
+        <source media="(min-width: 768px)" type="image/webp"
+          srcset="images/flat-white-tablet@1x.webp 1x, images/flat-white-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="images/flat-white-mobile@1x.webp 1x, images/flat-white-mobile@2x.webp 2x">
+
+        <source media="(min-width: 1440px)" type="image/png"
+          srcset="images/flat-white-desktop@1x.png 1x, images/flat-white-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" type="image/png"
+          srcset="images/flat-white-tablet@1x.png 1x, images/flat-white-tablet@2x.png 2x">
+        <img class="hero__image" src="images/flat-white-mobile@1x.png" srcset="images/flat-white-mobile@2x.png 2x"
+          alt="Кофе Декаф Флэт Уайт." width="280" height="280">
+      </picture>
       <p class="hero__badge badge">Новинка!</p>
-      <img class="hero__image" src="images/slider-mobile.jpg" alt="Кофе Декаф Флэт Уайт." width="280" height="280">
       <p class="hero__title title">Декаф Флэт Уайт</p>
       <p class="hero__description description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
         молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-      <span class="hero__price hero__price--old">295₽</span>
-      <span class="hero__price">225₽</span>
-      <a class="hero__button" href="#">Заказать</a>
+      <div class="hero__wrapper">
+        <span class="hero__price hero__price--old">295₽</span>
+        <span class="hero__price">225₽</span>
+        <a class="hero__button" href="#">Заказать</a>
+      </div>
     </header>
     <section class="features">
       <h2 class="features__badge badge">Преимущества</h2>
