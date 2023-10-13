@@ -1,0 +1,63 @@
+.features {
+  padding: 50px 20px 60px;
+  text-align: center;
+}
+
+.features__badge {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.features__title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: normal;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features__item {
+  padding-top: 98px;
+  background-repeat: no-repeat;
+  background-position: center 32px;
+  background-size: 50px 56px;
+
+  &--speed {
+    background-size: 50px 56px;
+    background-image: url("/images/icons/stack.svg#features-speed");
+  }
+
+  &--fit {
+    background-image: url("/images/icons/stack.svg#features-fit");
+  }
+
+  &--energy {
+    background-image: url("/images/icons/stack.svg#features-energy");
+  }
+
+  &--eco {
+    background-image: url("/images/icons/stack.svg#features-eco");
+  }
+}
+
+.features__item-title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: normal;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.features__item-descriptoin {
+  margin: 0;
+}

@@ -166,23 +166,47 @@
 
 .slider__button {
   position: absolute;
-  content: "";
   width: 20px;
-  height: 656px;
+  height: 100%;
   top: 0;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-image: url("/images/icons/stack.svg#slider-next");
+  padding: 0;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   &--prev {
     left: 0;
-    transform: scale(-1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 20px;
+      display: block;
+      background-repeat: no-repeat;
+      background-image: url("/images/icons/stack.svg#slider-next");
+      transform: scaleX(-1) translateX(-50%) translateY(-50%);
+    }
   }
 
   &--next {
     right: 0;
+    transform: scale(-1);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 12px;
+      height: 20px;
+      display: block;
+      background-repeat: no-repeat;
+      background-image: url("/images/icons/stack.svg#slider-next");
+      transform: scaleX(-1) translateX(50%) translateY(-50%);
+    }
   }
 
   &:hover {
@@ -199,12 +223,6 @@
 
   @media (min-width: $tablet-width) {
     width: 80px;
-    height: 640px;
-    background-size: 25%;
-  }
-
-  @media (min-width: $desktop-width) {
-    height: 714px;
   }
 }
 
