@@ -1,6 +1,11 @@
 .features {
   padding: 50px 20px 60px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 }
 
 .features__badge {
@@ -16,22 +21,37 @@
   letter-spacing: normal;
   margin: 0;
   margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
 }
 
 .features__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    text-align: start;
+    gap: 50px 30px;
+    padding: 58px 10px;
+  }
 }
 
 .features__item {
   padding-top: 98px;
   background-repeat: no-repeat;
   background-position: center 32px;
-  background-size: 50px 56px;
+  background-size: 52px 56px;
 
   &--speed {
-    background-size: 50px 56px;
     background-image: url("/images/icons/stack.svg#features-speed");
   }
 
@@ -46,6 +66,16 @@
   &--eco {
     background-image: url("/images/icons/stack.svg#features-eco");
   }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-left: 72px;
+    background-position: left 2px;
+
+    &--fit {
+      background-position: left 0;
+    }
+  }
 }
 
 .features__item-title {
@@ -56,8 +86,19 @@
   letter-spacing: normal;
   margin: 0;
   margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
 }
 
 .features__item-descriptoin {
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
