@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+  }
 }
 
 .catalog__badge {
@@ -21,22 +25,54 @@
   margin: 0;
   margin-bottom: 20px;
   letter-spacing: normal;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}
+
+.catalog__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.catalog__wrapper-right {
+  display: flex;
+  flex-direction: column;
 }
 
 .catalog__filter {
-  display: flex;
-  flex-direction: column;
   margin-bottom: 20px;
 }
 
 .catalog__sorting-select {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
 }
 
 .catalog__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .catalog__item {
@@ -46,6 +82,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 30px 30px;
+    margin-bottom: 0;
+  }
 }
 
 .catalog__image-wrapper {
@@ -53,6 +94,10 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .catalog__item-title {
@@ -62,12 +107,21 @@
   line-height: 32px;
   margin: 0;
   margin-bottom: 3px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
 }
 
 .catalog__item-description {
   margin: 0;
   margin-bottom: 16px;
-  letter-spacing: normal;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .catalog__price-wrapper {
@@ -97,4 +151,10 @@
   margin: 16px 0 44px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+    margin-top: 70px;
+    margin-bottom: 39px;
+  }
 }

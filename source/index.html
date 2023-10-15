@@ -198,216 +198,222 @@
     <section class="catalog">
       <h2 class="catalog__badge badge">Каталог</h2>
       <p class="catalog__title title">Каталог кофейных напитков</p>
-      <form class="catalog__filter filter" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="filter__group range">
-          <legend class="filter__title range__title">Цена</legend>
-          <div class="range__slider" id="slider"></div>
-          <div class="range-wrapper-inputs">
-            <label class="filter__label">
-              <input class="range__input range__input--min" type="number" value="0" name="min-price">
-            </label>
-            <label class="filter__label">
-              <input class="range__input range__input--max" type="number" value="900" name="max-price">
-            </label>
+      <div class="catalog__wrapper">
+        <form class="catalog__filter filter" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="filter__group range">
+            <legend class="filter__title range__title">Цена</legend>
+            <div class="range__slider" id="slider"></div>
+            <div class="range-wrapper-inputs">
+              <label class="filter__label">
+                <input class="range__input range__input--min" type="number" value="0" name="min-price">
+              </label>
+              <label class="filter__label">
+                <input class="range__input range__input--max" type="number" value="900" name="max-price">
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="filter__group">
+            <legend class="filter__title">Наличие молока</legend>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <label class="filter__control">
+                  <input class="filter__control-input" type="radio" name="no-matter" checked>
+                  <span class="filter__control-text">Неважно</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__control">
+                  <input class="filter__control-input" type="radio" name="only-animal">
+                  <span class="filter__control-text">Только животное</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__control">
+                  <input class="filter__control-input" type="radio" name="only-vegetable">
+                  <span class="filter__control-text">Только растительное</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__control">
+                  <input class="filter__control-input" type="radio" name="without-milk" disabled>
+                  <span class="filter__control-text">Без молока</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__group">
+            <legend class="filter__title">Страна произрастания</legend>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <label class="filter__switch">
+                  <input class="filter__switch-input" type="checkbox" name="Brazil" checked>
+                  <span class="filter__switch-checkbox"></span>
+                  <span class="filter__switch-text">Бразилия</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__switch">
+                  <input class="filter__switch-input" type="checkbox" name="Ethiopia">
+                  <span class="filter__switch-checkbox"></span>
+                  <span class="filter__switch-text">Эфиопия</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__switch">
+                  <input class="filter__switch-input" type="checkbox" name="Colombia">
+                  <span class="filter__switch-checkbox"></span>
+                  <span class="filter__switch-text">Колумбия</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__switch">
+                  <input class="filter__switch-input" type="checkbox" name="Costa-Rica">
+                  <span class="filter__switch-checkbox"></span>
+                  <span class="filter__switch-text">Коста-Рика</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="filter__switch">
+                  <input class="filter__switch-input" type="checkbox" name="Peru" disabled>
+                  <span class="filter__switch-checkbox"></span>
+                  <span class="filter__switch-text">Перу</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="filter__button-wrapper">
+            <button class="filter__button button" type="submit">Применить</button>
+            <button class="filter__button filter__button--reset button" type="reset">Сбросить</button>
           </div>
-        </fieldset>
-        <fieldset class="filter__group">
-          <legend class="filter__title">Наличие молока</legend>
-          <ul class="filter__list">
-            <li class="filter__item">
-              <label class="filter__control">
-                <input class="filter__control-input" type="radio" name="no-matter" checked>
-                <span class="filter__control-text">Неважно</span>
-              </label>
+        </form>
+        <div class="catalog__wrapper-right">
+          <div class="catalog__sorting-select sorting-select">
+            <span class="sorting-select__title">Сортировка:</span>
+            <select class="sorting-select__control" name="sort" aria-label="Сортировка">
+              <option value="default">по умолчанию</option>
+            </select>
+          </div>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <div class="catalog__image-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="images/item-1@1x.webp 1x, images/item-1@2x.webp 2x">
+                  <img class="catalog__image" src="images/item-1@1x.png" srcset="images/item-1@2x.png 2x"
+                    alt="Декаф Флэт Уайт." width="130" height="188">
+                </picture>
+              </div>
+              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="catalog__price-wrapper">
+                <span class="catalog__item-price">225₽</span>
+                <a class="catalog__item-button button" href="#">В корзину</a>
+              </div>
             </li>
-            <li class="filter__item">
-              <label class="filter__control">
-                <input class="filter__control-input" type="radio" name="only-animal">
-                <span class="filter__control-text">Только животное</span>
-              </label>
+            <li class="catalog__item">
+              <div class="catalog__image-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="images/item-2@1x.webp 1x, images/item-2@2x.webp 2x">
+                  <img class="catalog__image" src="images/item-2@1x.png" srcset="images/item-2@2x.png 2x"
+                    alt="Декаф Флэт Уайт." width="130" height="188">
+                </picture>
+              </div>
+              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="catalog__price-wrapper">
+                <span class="catalog__item-price">225₽</span>
+                <a class="catalog__item-button button" href="#">В корзину</a>
+              </div>
             </li>
-            <li class="filter__item">
-              <label class="filter__control">
-                <input class="filter__control-input" type="radio" name="only-vegetable">
-                <span class="filter__control-text">Только растительное</span>
-              </label>
+            <li class="catalog__item">
+              <div class="catalog__image-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="images/item-3@1x.webp 1x, images/item-3@2x.webp 2x">
+                  <img class="catalog__image" src="images/item-3@1x.png" srcset="images/item-3@2x.png 2x"
+                    alt="Декаф Флэт Уайт." width="130" height="188">
+                </picture>
+              </div>
+              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="catalog__price-wrapper">
+                <span class="catalog__item-price">225₽</span>
+                <a class="catalog__item-button button" href="#">В корзину</a>
+              </div>
             </li>
-            <li class="filter__item">
-              <label class="filter__control">
-                <input class="filter__control-input" type="radio" name="without-milk" disabled>
-                <span class="filter__control-text">Без молока</span>
-              </label>
+            <li class="catalog__item">
+              <div class="catalog__image-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="images/item-4@1x.webp 1x, images/item-4@2x.webp 2x">
+                  <img class="catalog__image" src="images/item-4@1x.png" srcset="images/item-4@2x.png 2x"
+                    alt="Декаф Флэт Уайт." width="130" height="188">
+                </picture>
+              </div>
+              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="catalog__price-wrapper">
+                <span class="catalog__item-price">225₽</span>
+                <a class="catalog__item-button button" href="#">В корзину</a>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <div class="catalog__image-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="images/item-5@1x.webp 1x, images/item-5@2x.webp 2x">
+                  <img class="catalog__image" src="images/item-5@1x.png" srcset="images/item-5@2x.png 2x"
+                    alt="Декаф Флэт Уайт." width="130" height="188">
+                </picture>
+              </div>
+              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="catalog__price-wrapper">
+                <span class="catalog__item-price">225₽</span>
+                <a class="catalog__item-button button" href="#">В корзину</a>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <div class="catalog__image-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="images/item-6@1x.webp 1x, images/item-6@2x.webp 2x">
+                  <img class="catalog__image" src="images/item-6@1x.png" srcset="images/item-6@2x.png 2x"
+                    alt="Декаф Флэт Уайт." width="130" height="188">
+                </picture>
+              </div>
+              <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <div class="catalog__price-wrapper">
+                <span class="catalog__item-price">225₽</span>
+                <a class="catalog__item-button button" href="#">В корзину</a>
+              </div>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="filter__group">
-          <legend class="filter__title">Страна произрастания</legend>
-          <ul class="filter__list">
-            <li class="filter__item">
-              <label class="filter__switch">
-                <input class="filter__switch-input" type="checkbox" name="Brazil" checked>
-                <span class="filter__switch-checkbox"></span>
-                <span class="filter__switch-text">Бразилия</span>
-              </label>
+          <ul class="catalog__pagination pagination">
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--prev link" href="#">
+                <span>Назад</span>
+                <svg width="10" height="10">
+                  <use href="images/icons/stack.svg#prev"></use>
+                </svg>
+              </a>
             </li>
-            <li class="filter__item">
-              <label class="filter__switch">
-                <input class="filter__switch-input" type="checkbox" name="Ethiopia">
-                <span class="filter__switch-checkbox"></span>
-                <span class="filter__switch-text">Эфиопия</span>
-              </label>
+            <li class="pagination__item">
+              <a class="pagination__link link" href="#">1</a>
             </li>
-            <li class="filter__item">
-              <label class="filter__switch">
-                <input class="filter__switch-input" type="checkbox" name="Colombia">
-                <span class="filter__switch-checkbox"></span>
-                <span class="filter__switch-text">Колумбия</span>
-              </label>
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--current link" href="#">2</a>
             </li>
-            <li class="filter__item">
-              <label class="filter__switch">
-                <input class="filter__switch-input" type="checkbox" name="Costa-Rica">
-                <span class="filter__switch-checkbox"></span>
-                <span class="filter__switch-text">Коста-Рика</span>
-              </label>
+            <li class="pagination__item">
+              <a class="pagination__link link" href="#">3</a>
             </li>
-            <li class="filter__item">
-              <label class="filter__switch">
-                <input class="filter__switch-input" type="checkbox" name="Peru" disabled>
-                <span class="filter__switch-checkbox"></span>
-                <span class="filter__switch-text">Перу</span>
-              </label>
+            <li class="pagination-item">
+              <a class="pagination__link pagination__link--next link" href="#">
+                <span>Вперёд</span>
+                <svg width="10" height="10">
+                  <use href="images/icons/stack.svg#next"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </fieldset>
-        <button class="filter__button button" type="submit">Применить</button>
-        <button class="filter__button filter__button--reset button" type="reset">Сбросить</button>
-      </form>
-      <div class="catalog__sorting-select sorting-select">
-        <span class="sorting-select__title">Сортировка:</span>
-        <select class="sorting-select__control" name="sort" aria-label="Сортировка">
-          <option value="default">по умолчанию</option>
-        </select>
+        </div>
       </div>
-      <ul class="catalog__list">
-        <li class="catalog__item">
-          <div class="catalog__image-wrapper">
-            <picture>
-              <source type="image/webp" srcset="images/item-1@1x.webp 1x, images/item-1@2x.webp 2x">
-              <img class="catalog__image" src="images/item-1@1x.png" srcset="images/item-1@2x.png 2x"
-                alt="Декаф Флэт Уайт." width="130" height="188">
-            </picture>
-          </div>
-          <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-          <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="catalog__price-wrapper">
-            <span class="catalog__item-price">225₽</span>
-            <a class="catalog__item-button button" href="#">В корзину</a>
-          </div>
-        </li>
-        <li class="catalog__item">
-          <div class="catalog__image-wrapper">
-            <picture>
-              <source type="image/webp" srcset="images/item-2@1x.webp 1x, images/item-2@2x.webp 2x">
-              <img class="catalog__image" src="images/item-2@1x.png" srcset="images/item-2@2x.png 2x"
-                alt="Декаф Флэт Уайт." width="130" height="188">
-            </picture>
-          </div>
-          <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-          <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="catalog__price-wrapper">
-            <span class="catalog__item-price">225₽</span>
-            <a class="catalog__item-button button" href="#">В корзину</a>
-          </div>
-        </li>
-        <li class="catalog__item">
-          <div class="catalog__image-wrapper">
-            <picture>
-              <source type="image/webp" srcset="images/item-3@1x.webp 1x, images/item-3@2x.webp 2x">
-              <img class="catalog__image" src="images/item-3@1x.png" srcset="images/item-3@2x.png 2x"
-                alt="Декаф Флэт Уайт." width="130" height="188">
-            </picture>
-          </div>
-          <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-          <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="catalog__price-wrapper">
-            <span class="catalog__item-price">225₽</span>
-            <a class="catalog__item-button button" href="#">В корзину</a>
-          </div>
-        </li>
-        <li class="catalog__item">
-          <div class="catalog__image-wrapper">
-            <picture>
-              <source type="image/webp" srcset="images/item-4@1x.webp 1x, images/item-4@2x.webp 2x">
-              <img class="catalog__image" src="images/item-4@1x.png" srcset="images/item-4@2x.png 2x"
-                alt="Декаф Флэт Уайт." width="130" height="188">
-            </picture>
-          </div>
-          <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-          <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="catalog__price-wrapper">
-            <span class="catalog__item-price">225₽</span>
-            <a class="catalog__item-button button" href="#">В корзину</a>
-          </div>
-        </li>
-        <li class="catalog__item">
-          <div class="catalog__image-wrapper">
-            <picture>
-              <source type="image/webp" srcset="images/item-5@1x.webp 1x, images/item-5@2x.webp 2x">
-              <img class="catalog__image" src="images/item-5@1x.png" srcset="images/item-5@2x.png 2x"
-                alt="Декаф Флэт Уайт." width="130" height="188">
-            </picture>
-          </div>
-          <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-          <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="catalog__price-wrapper">
-            <span class="catalog__item-price">225₽</span>
-            <a class="catalog__item-button button" href="#">В корзину</a>
-          </div>
-        </li>
-        <li class="catalog__item">
-          <div class="catalog__image-wrapper">
-            <picture>
-              <source type="image/webp" srcset="images/item-6@1x.webp 1x, images/item-6@2x.webp 2x">
-              <img class="catalog__image" src="images/item-6@1x.png" srcset="images/item-6@2x.png 2x"
-                alt="Декаф Флэт Уайт." width="130" height="188">
-            </picture>
-          </div>
-          <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-          <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-          <div class="catalog__price-wrapper">
-            <span class="catalog__item-price">225₽</span>
-            <a class="catalog__item-button button" href="#">В корзину</a>
-          </div>
-        </li>
-      </ul>
-      <ul class="catalog__pagination pagination">
-        <li class="pagination__item">
-          <a class="pagination__link pagination__link--prev link" href="#">
-            <span>Назад</span>
-            <svg width="10" height="10">
-              <use href="images/icons/stack.svg#prev"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link link" href="#">1</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link pagination__link--current link" href="#">2</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link link" href="#">3</a>
-        </li>
-        <li class="pagination-item">
-          <a class="pagination__link pagination__link--next link" href="#">
-            <span>Вперёд</span>
-            <svg width="10" height="10">
-              <use href="images/icons/stack.svg#next"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Расположение магазина кофейных напитков Drink2Go на карте</h2>

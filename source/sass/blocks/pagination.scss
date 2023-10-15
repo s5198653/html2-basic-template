@@ -9,15 +9,17 @@
 
 .pagination__link {
   display: block;
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   padding: 8px;
   text-align: center;
   font-size: 16px;
   line-height: 24px;
+  font-weight: 400;
   color: $base-primary;
   background-color: $base-white;
   text-decoration: none;
+  text-transform: none;
 
   &--prev,
   &--next {
@@ -53,8 +55,18 @@
   display: none;
   font-size: 12px;
   line-height: 16px;
+  padding-left: 11px;
+  padding-right: 11px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: block;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.pagination svg {
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }

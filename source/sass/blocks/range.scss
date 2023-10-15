@@ -11,6 +11,14 @@
   margin: 12px 0;
   padding: 0 14px;
   background-color: $base-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
 }
 
 .range-wrapper-inputs {
@@ -49,6 +57,10 @@
   background: $base-white;
   cursor: pointer;
 
+  &--min {
+    color: $base-grey;
+  }
+
   &:focus {
     border: 2px solid #593cac;
   }
@@ -56,5 +68,13 @@
   &:disabled {
     border: 2px solid #e2e2e2;
     background-color: #f8f8f8;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
   }
 }

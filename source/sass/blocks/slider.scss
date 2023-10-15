@@ -247,4 +247,8 @@
   padding: 0;
   background-color: $base-white;
   border: none;
+
+  &--current {
+    background-color: $base-primary;
+  }
 }
