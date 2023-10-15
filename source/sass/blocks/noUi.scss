@@ -1,0 +1,98 @@
+.range .noUi-target {
+  height: 2px;
+  background: $base-grey;
+  border-radius: unset;
+  border: none;
+  box-shadow: none;
+}
+
+.range .noUi-handle {
+  top: -11px;
+  right: -17px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+  box-shadow: none;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.range .noUi-handle:hover,
+.range .noUi-handle:focus {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: rgba(120, 89, 207, 0.25);
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.range .noUi-handle:focus {
+  outline: none;
+}
+
+.range .noUi-handle:active {
+  border: 2px solid $base-primary;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: $base-primary;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.range .noUi-handle-lower {
+  right: -10px;
+}
+
+[disabled] .range .noUi-handle {
+  border-color: $base-grey;
+}
+
+[disabled] .range .noUi-handle:hover {
+  &::before {
+    display: none;
+  }
+}
+
+[disabled] .range .noUi-handle:focus {
+  &::before {
+    display: none;
+  }
+}
+
+[disabled] .range .noUi-handle:active {
+  &::before {
+    display: none;
+  }
+}
+
+.range .noUi-connects {
+  height: 4px;
+  transform: translateY(-1px);
+}
+
+.range .noUi-connect {
+  background: #9070ec;
+}
+
+[disabled] .range .noUi-connect {
+  background: $base-grey;
+}

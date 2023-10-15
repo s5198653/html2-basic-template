@@ -15,15 +15,19 @@
   width: 40px;
   height: 40px;
   padding: 10px;
+
+  &:hover {
+    background-color: $base-secondary;
+  }
 }
 
 .social__link svg {
   display: block;
   fill: #bdbdbd;
   cursor: pointer;
-
-  &:hover {
-    fill: $base-primary;
-  }
 }
 
+.social__link:hover svg,
+.social__link:active svg {
+  fill: $base-primary;
+}

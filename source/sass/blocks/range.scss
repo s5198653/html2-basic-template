@@ -1,0 +1,60 @@
+// .range {
+//   display: flex;
+// }
+.range__title {
+  margin-bottom: 18px;
+}
+
+.range__slider {
+  height: 2px;
+  width: 280px;
+  margin: 12px 0;
+  padding: 0 14px;
+  background-color: $base-grey;
+}
+
+.range-wrapper-inputs {
+  position: relative;
+  padding-top: 22px;
+  display: flex;
+  gap: 44px;
+  justify-content: space-between;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    display: block;
+    width: 8px;
+    height: 2px;
+    background-color: $base-grey;
+    transform: translateX(-50%);
+  }
+}
+
+.range__input {
+  width: 118px;
+  height: 40px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: $base-black;
+  text-align: center;
+  padding: 8px 10px 8px 24px;
+  border-radius: 4px;
+  border: 2px solid #9070ec;
+  background: $base-white;
+  cursor: pointer;
+
+  &:focus {
+    border: 2px solid #593cac;
+  }
+
+  &:disabled {
+    border: 2px solid #e2e2e2;
+    background-color: #f8f8f8;
+  }
+}
