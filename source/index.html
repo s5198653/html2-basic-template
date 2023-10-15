@@ -11,7 +11,7 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header" data-test="header">
     <a class="main-header__logo logo" href="#">
       <picture>
         <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
@@ -53,22 +53,24 @@
           </a>
         </li>
       </ul>
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__toggle js-toggle-button" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </nav>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
-    <header class="hero">
+    <header class="hero" data-test="hero">
       <div class="slider">
         <h2 class="visually-hidden">Новинки!</h2>
-        <button class="slider__button slider__button--prev" type="button" aria-label="Предыдущий слайд.">
+        <button class="slider__button slider__button--prev slider-button-prev" type="button"
+          aria-label="Предыдущий слайд.">
           <svg width="11" height="20">
             <use href="images/icons/stack.svg#slider-next"></use>
           </svg>
         </button>
-        <button class="slider__button slider__button--next" type="button" aria-label="Следующий слайд.">
+        <button class="slider__button slider__button--next slider-button-next" type="button"
+          aria-label="Следующий слайд.">
           <svg width="20" height="20">
             <use href="images/icons/stack.svg#slider-next"></use>
           </svg>
@@ -160,7 +162,7 @@
             </div>
           </li>
         </ul>
-        <ol class="slider__pagination">
+        <ol class="slider__pagination slider-pagination">
           <li class="slider__pagination-item">
             <button class="slider__pagination-button slider__pagination-button--current" type="button">
               <span></span>
@@ -182,7 +184,7 @@
         </ol>
       </div>
     </header>
-    <section class="features">
+    <section class="features" data-test="features">
       <h2 class="features__badge badge">Преимущества</h2>
       <p class="features__title title">Главные причины выбрать Drink2Go</p>
       <ul class="features__list">
@@ -206,7 +208,7 @@
         </li>
       </ul>
     </section>
-    <section class="catalog">
+    <section class="catalog" data-test="catalog">
       <h2 class="catalog__badge badge">Каталог</h2>
       <p class="catalog__title title">Каталог кофейных напитков</p>
       <div class="catalog__wrapper">
@@ -426,7 +428,7 @@
         </div>
       </div>
     </section>
-    <section class="map">
+    <section class="map" data-test="map">
       <h2 class="visually-hidden">Расположение магазина кофейных напитков Drink2Go на карте</h2>
       <picture>
         <source media="(min-width: 1440px)" type="image/webp"
@@ -444,7 +446,7 @@
     </section>
   </main>
 
-  <footer class="main-footer">
+  <footer class="main-footer" data-test="footer">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo logo" href="#">
         <picture>
@@ -531,8 +533,8 @@
     </div>
   </footer>
 
-  <script src="vendor/nouislider/nouislider.js"></script>
-  <script type="module" src="js/script.js"></script>
+  <script src="vendor/nouislider/nouislider.js" defer></script>
+  <script type="module" src="js/script.js" defer></script>
 </body>
 
 </html>
