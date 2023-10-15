@@ -20,7 +20,8 @@
 
   @media (min-width: $tablet-width) {
     border: none;
-    padding-top: 42px;
+    padding-top: 40px;
+    padding-bottom: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -117,6 +118,7 @@
   background-image: url("/images/icons/stack.svg#address");
   background-repeat: no-repeat;
   background-size: 13px 16px;
+  background-position: left top 2px;
   margin: 20px 0 16px;
 }
 
@@ -133,7 +135,7 @@
   padding: 20px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 9px;
+    padding-top: 10px;
   }
 
   @media (min-width: $desktop-width) {

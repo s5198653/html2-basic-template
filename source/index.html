@@ -63,8 +63,16 @@
     <header class="hero">
       <div class="slider">
         <h2 class="visually-hidden">Новинки!</h2>
-        <button class="slider__button slider__button--prev" type="button" aria-label="Предыдущий слайд."></button>
-        <button class="slider__button slider__button--next" type="button" aria-label="Следующий слайд."></button>
+        <button class="slider__button slider__button--prev" type="button" aria-label="Предыдущий слайд.">
+          <svg width="11" height="20">
+            <use href="images/icons/stack.svg#slider-next"></use>
+          </svg>
+        </button>
+        <button class="slider__button slider__button--next" type="button" aria-label="Следующий слайд.">
+          <svg width="20" height="20">
+            <use href="images/icons/stack.svg#slider-next"></use>
+          </svg>
+        </button>
         <ul class="slider__list">
           <li class="slider__item slider__item--current">
             <div class="slider__image-wrapper">
@@ -90,7 +98,7 @@
                   class="slider__break">с натуральным фермерским молоком — то, что нужно <br class="slider__break">для
                 расслабления после
                 тяжёлого рабочего дня</p>
-              <div class="slider__wrapper">
+              <div class="slider__action-block">
                 <span class="slider__price slider__price--old">295₽</span>
                 <span class="slider__price">225₽</span>
                 <a class="slider__item-button button" href="#">Заказать</a>
@@ -118,7 +126,7 @@
             <p class="slider__description description">Невероятное сочетание перуанской высокогорной <br
                 class="slider__break">арабики с
               молоком ламы и лавандовым сиропом унесёт <br class="slider__break">вас прямо на вершину Радужных гор</p>
-            <div class="slider__wrapper">
+            <div class="slider__action-block">
               <span class="slider__price slider__price--old">285₽</span>
               <span class="slider__price">265₽</span>
               <a class="slider__item-button button" href="#">Заказать</a>
@@ -145,7 +153,7 @@
             <p class="slider__description description">Мощнее укола адреналина, чернее самой тёмной ночи, <br
                 class="slider__break">этот
               тройной эспрессо из Колумбии покажет вам, что такое <br class="slider__break">настоящая бодрость</p>
-            <div class="slider__wrapper">
+            <div class="slider__action-block">
               <span class="slider__price slider__price--old">395₽</span>
               <span class="slider__price">375₽</span>
               <a class="slider__item-button button" href="#">Заказать</a>
@@ -155,16 +163,19 @@
         <ol class="slider__pagination">
           <li class="slider__pagination-item">
             <button class="slider__pagination-button slider__pagination-button--current" type="button">
+              <span></span>
               <span class="visually-hidden">1 слайд</span>
             </button>
           </li>
           <li class="slider__pagination-item">
             <button class="slider__pagination-button" type="button">
+              <span></span>
               <span class="visually-hidden">2 слайд</span>
             </button>
           </li>
           <li class="slider__pagination-item">
             <button class="slider__pagination-button" type="button">
+              <span></span>
               <span class="visually-hidden">3 слайд</span>
             </button>
           </li>
@@ -303,7 +314,7 @@
                 </picture>
               </div>
               <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии <br>с натуральным фермерским молоком</p>
               <div class="catalog__price-wrapper">
                 <span class="catalog__item-price">225₽</span>
                 <a class="catalog__item-button button" href="#">В корзину</a>
@@ -318,7 +329,7 @@
                 </picture>
               </div>
               <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии <br>с натуральным фермерским молоком</p>
               <div class="catalog__price-wrapper">
                 <span class="catalog__item-price">225₽</span>
                 <a class="catalog__item-button button" href="#">В корзину</a>
@@ -333,7 +344,7 @@
                 </picture>
               </div>
               <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии <br>с натуральным фермерским молоком</p>
               <div class="catalog__price-wrapper">
                 <span class="catalog__item-price">225₽</span>
                 <a class="catalog__item-button button" href="#">В корзину</a>
@@ -348,7 +359,7 @@
                 </picture>
               </div>
               <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии <br>с натуральным фермерским молоком</p>
               <div class="catalog__price-wrapper">
                 <span class="catalog__item-price">225₽</span>
                 <a class="catalog__item-button button" href="#">В корзину</a>
@@ -363,7 +374,7 @@
                 </picture>
               </div>
               <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии <br>с натуральным фермерским молоком</p>
               <div class="catalog__price-wrapper">
                 <span class="catalog__item-price">225₽</span>
                 <a class="catalog__item-button button" href="#">В корзину</a>
@@ -378,7 +389,7 @@
                 </picture>
               </div>
               <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
-              <p class="catalog__item-description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+              <p class="catalog__item-description">Кофе без кофеина из Эфиопии <br>с натуральным фермерским молоком</p>
               <div class="catalog__price-wrapper">
                 <span class="catalog__item-price">225₽</span>
                 <a class="catalog__item-button button" href="#">В корзину</a>

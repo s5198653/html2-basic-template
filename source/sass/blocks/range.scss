@@ -1,6 +1,6 @@
-// .range {
-//   display: flex;
-// }
+.range {
+  max-width: 318px;
+}
 .range__title {
   margin-bottom: 18px;
 }
@@ -24,6 +24,7 @@
 .range-wrapper-inputs {
   position: relative;
   padding-top: 22px;
+  padding-bottom: 2px;
   display: flex;
   gap: 44px;
   justify-content: space-between;
@@ -38,6 +39,10 @@
     height: 2px;
     background-color: $base-grey;
     transform: translateX(-50%);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
   }
 }
 

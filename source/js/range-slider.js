@@ -5,12 +5,12 @@ const DEFAULT__VALUES = {
   end: 900,
   step: 1
 };
-const sliderElement = document.querySelector('.range__slider');
+const rangeElement = document.querySelector('.range__slider');
 const minInput = document.querySelector('.range__input--min');
 const maxInput = document.querySelector('.range__input--max');
 
 const initRange = () => {
-  noUiSlider.create(sliderElement, {
+  noUiSlider.create(rangeElement, {
     start: [DEFAULT__VALUES.start, DEFAULT__VALUES.end],
     connect: true,
     range: {
@@ -21,14 +21,14 @@ const initRange = () => {
   });
 };
 
-const sliderUpdate = () => {
-  const value = sliderElement.noUiSlider.get();
+const setInputValue = () => {
+  const value = rangeElement.noUiSlider.get();
   minInput.value = Math.floor(value[0]);
   maxInput.value = Math.floor(value[1]);
 };
 
-const updateSlider = () => {
-  sliderElement.noUiSlider.on('update', sliderUpdate);
+const updateRange = () => {
+  rangeElement.noUiSlider.on('update', setInputValue);
 };
 
-export {initRange, updateSlider};
+export {initRange, updateRange};

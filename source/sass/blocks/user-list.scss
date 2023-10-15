@@ -13,7 +13,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 250px;
+    width: 260px;
     gap: 20px;
 
     span {
@@ -21,6 +21,10 @@
       opacity: 1;
     }
   }
+}
+
+.user-list__item {
+  word-break: break-word;
 }
 
 .user-list__link {
@@ -35,6 +39,6 @@
 
   @media (min-width: $desktop-width) {
     gap: 8px;
-    padding: 20px;
+    padding: 15px;
   }
 }
