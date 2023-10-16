@@ -1,14 +1,18 @@
 .features {
   padding: 50px 20px 60px;
   text-align: center;
+  width: 320px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     padding-top: 61px;
     padding-bottom: 40px;
+    width: $tablet-width;
   }
 
   @media (min-width: $desktop-width) {
     padding: 100px 40px;
+    width: $desktop-width;
   }
 }
 
