@@ -27,9 +27,9 @@
 
 .main-nav__toggle {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  width: 40px;
+  width: 60px;
   height: 60px;
   padding: 0;
   background-color: $base-white;
@@ -75,7 +75,7 @@
 
 .main-nav--opened .site-list {
   position: absolute;
-  right: -20px;
+  right: 0;
   top: 60px;
   z-index: 2;
   width: 100%;
