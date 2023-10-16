@@ -71,10 +71,6 @@
   background: $base-white;
   cursor: pointer;
 
-  &--min {
-    color: $base-grey;
-  }
-
   &:focus {
     border: 2px solid #593cac;
   }
