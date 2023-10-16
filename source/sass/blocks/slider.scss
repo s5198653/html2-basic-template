@@ -1,4 +1,4 @@
-$bottom-offset: 200px;
+$bottom-offset: 187px;
 
 .slider {
   position: relative;
@@ -48,6 +48,8 @@ $bottom-offset: 200px;
     height: auto;
     padding-top: 30px;
     justify-content: center;
+    padding-bottom: 40px;
+    margin-bottom: 0;
   }
 }
 
@@ -76,6 +78,8 @@ $bottom-offset: 200px;
     bottom: 0;
     width: 600px;
     height: 600px;
+    margin-bottom: 45px;
+    padding-left: 45px;
   }
 }
 
@@ -86,6 +90,8 @@ $bottom-offset: 200px;
   @media (min-width: $desktop-width) {
     text-align: start;
     width: calc(100% - 600px);
+    padding-left: 75px;
+    padding-bottom: 45px;
   }
 }
 
@@ -135,6 +141,8 @@ $bottom-offset: 200px;
 
   @media (min-width: $desktop-width) {
     justify-content: start;
+    margin-top: 40px;
+    margin-bottom: 7px;
   }
 }
 
@@ -190,10 +198,35 @@ $bottom-offset: 200px;
     width: 80px;
     height: calc(100% + $bottom-offset);
   }
+
+  @media (min-width: $tablet-width) {
+    height: 100%;
+  }
 }
 
 .slider__button svg {
   fill: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 310px;
+    left: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 347px;
+  }
+}
+
+.slider__button--prev svg {
+  @media (min-width: $tablet-width) {
+    top: 310px;
+    left: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 347px;
+  }
 }
 
 .slider__button:disabled svg {
@@ -217,13 +250,13 @@ $bottom-offset: 200px;
     flex-wrap: wrap;
     justify-content: center;
     position: absolute;
-    bottom: 60px;
-    left: 45%;
+    bottom: 51px;
+    left: calc(50% - 109px);
   }
 }
 
 .slider__pagination-item {
-  margin: 0 8px;
+  margin: 0 0 0 8px;
 }
 
 .slider__pagination-button {

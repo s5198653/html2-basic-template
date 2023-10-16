@@ -5,19 +5,22 @@
   justify-content: space-between;
   align-items: center;
   min-height: 60px;
-  margin: 0 0 0 20px;
+  margin: 0 20px;
 
   @media (min-width: $tablet-width) {
     min-height: 80px;
     margin: 0 20px;
-    display: grid;
-    grid-template-columns: 82px 1fr;
-    gap: 67px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0 40px;
-    grid-template-columns: 320px 1fr;
-    gap: 162px;
+  }
+}
+
+.main-header__logo {
+  margin-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 22px;
   }
 }

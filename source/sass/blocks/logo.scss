@@ -4,6 +4,15 @@
   color: $base-black;
   text-decoration: none;
   gap: 20px;
+  margin-bottom: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 320px;
+  }
 }
 
 .logo__image {
@@ -27,5 +36,6 @@
 
   @media (min-width: $desktop-width) {
     display: block;
+    margin-top: 2px;
   }
 }

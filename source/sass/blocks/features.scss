@@ -3,7 +3,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding-top: 59px;
+    padding-top: 61px;
     padding-bottom: 40px;
   }
 
@@ -24,7 +24,7 @@
   line-height: 36px;
   letter-spacing: normal;
   margin: 0;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 
   @media (min-width: $tablet-width) {
     font-size: 42px;
@@ -82,7 +82,8 @@
     padding-left: 72px;
     background-position: left 2px;
 
-    &--fit {
+    &--fit,
+    &--energy {
       background-position: left 0;
     }
   }

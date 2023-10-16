@@ -11,6 +11,7 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
+    gap: 17px;
   }
 }
 
@@ -20,8 +21,27 @@
   padding: 0;
   border: none;
 
+  &--country {
+    margin-bottom: 31px;
+    transform: translateX(-1px);
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 11px;
+
+    &--milk {
+      transform: translateX(-1px) translateY(1px);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--milk {
+      margin-bottom: 15px;
+    }
+
+    &--country {
+      margin-bottom: 23px;
+    }
   }
 }
 
@@ -62,6 +82,10 @@
     justify-content: center;
     grid-column: 1/-1;
   }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
 }
 
 .filter__button {
@@ -74,6 +98,10 @@
     &:disabled {
       background-color: #e2e2e2;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 
@@ -238,5 +266,5 @@
 
 .filter__switch-text {
   padding-right: 5px;
-  padding-left: 52px;
+  padding-left: 53px;
 }

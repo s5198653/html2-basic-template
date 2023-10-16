@@ -5,16 +5,18 @@
 
 
   @media (min-width: $tablet-width) {
+    width: 580px;
     min-height: 100%;
     display: grid;
     grid-template-columns: 1fr 120px;
-    gap: 60px;
+    gap: 45px;
     align-items: center;
   }
 
   @media (min-width: $desktop-width) {
+    width: 882px;
     grid-template-columns: 1fr 270px;
-    gap: 160px;
+    gap: 155px;
     align-items: center;
   }
 }
@@ -25,14 +27,15 @@
 
 .main-nav__toggle {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  width: 60px;
+  width: 40px;
   height: 60px;
   padding: 0;
   background-color: $base-white;
   border: none;
   cursor: pointer;
+  padding-right: 3px;
 
   &:hover,
   &:active {
@@ -57,8 +60,8 @@
 .main-nav--opened .main-nav__toggle::before {
   content: "";
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   background-image: url("/images/icons/stack.svg#menu-closed");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -72,7 +75,7 @@
 
 .main-nav--opened .site-list {
   position: absolute;
-  right: 0;
+  right: -20px;
   top: 60px;
   z-index: 2;
   width: 100%;
